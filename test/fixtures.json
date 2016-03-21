@@ -1,0 +1,98 @@
+{
+  "missing colon for string": {
+    "input": "42",
+    "output": "string delimiter not found"
+  },
+  "string length is NaN": {
+    "input": "nan:",
+    "output": "invalid string length: nan"
+  },
+  "string length is float": {
+    "input": "4.2:",
+    "output": "invalid string length: 4.2"
+  },
+  "string length with leading zeros are invalid": {
+    "input": "042:",
+    "output": "invalid string length: 042"
+  },
+  "not enough data for string": {
+    "input": "42:asd",
+    "output": "string out of bounds"
+  },
+  "valid string": {
+    "input": "4:hey!",
+    "output": null
+  },
+  "ie": {
+    "input": "ie",
+    "output": "invalid integer"
+  },
+  "i-e": {
+    "input": "i-e",
+    "output": "invalid integer"
+  },
+  "i0e": {
+    "input": "i0e",
+    "output": null
+  },
+  "i01e": {
+    "input": "i01e",
+    "output": "^Error: leading zeros for integers are not allowed$"
+  },
+  "i-0e": {
+    "input": "i-0e",
+    "output": "i-0e is invalid integer"
+  },
+  "i-01e": {
+    "input": "i-01e",
+    "output": "leading zeros for integers are not allowed"
+  },
+  "i4.2e": {
+    "input": "i4.2e",
+    "output": "invalid integer"
+  },
+  "i42": {
+    "input": "i42",
+    "output": "stop symbol for integer not found"
+  },
+  "i42e": {
+    "input": "i42e",
+    "output": null
+  },
+  "i-42e": {
+    "input": "i-42e",
+    "output": null
+  },
+  "le": {
+    "input": "le",
+    "output": null
+  },
+  "li42e": {
+    "input": "li42e",
+    "output": "stop symbol for list not found"
+  },
+  "de": {
+    "input": "de",
+    "output": null
+  },
+  "d1:a1:b": {
+    "input": "d1:a1:b",
+    "output": "stop symbol for dictionary not found"
+  },
+  "mix#1": {
+    "input": "d3:cow3:moo4:spam4:eggse",
+    "output": null
+  },
+  "mix#2": {
+    "input": "d4:spaml1:a1:bee",
+    "output": null
+  },
+  "mix#3": {
+    "input": "d9:publisher3:bob17:publisher-webpage15:www.example.com18:publisher.location4:homee",
+    "output": null
+  },
+  "mix#4": {
+    "input": "d4:dictd1:k5:value1:llee7:integeri12345e4:listli1ei2ei3ei4e6:stringi5edee6:string11:Hello Worlde",
+    "output": null
+  }
+}

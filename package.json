@@ -1,0 +1,47 @@
+{
+  "name": "bencode-validator",
+  "version": "1.0.0",
+  "description": "BEncode validator",
+  "keywords": [
+    "bencode",
+    "bencoding",
+    "bittorrent",
+    "torrent",
+    "validate",
+    "validator"
+  ],
+  "homepage": "https://github.com/fanatid/bencode-validator",
+  "bugs": {
+    "url": "https://github.com/fanatid/bencode-validator/issues"
+  },
+  "license": "MIT",
+  "author": "Kirill Fomichev <fanatid@ya.ru> (http://github.com/fanatid)",
+  "files": [
+    "index.js"
+  ],
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fanatid/bencode-validator"
+  },
+  "scripts": {
+    "coverage": "nyc npm run unit:node",
+    "lint": "standard",
+    "test": "npm run lint && npm run unit",
+    "unit": "npm run unit:node && npm run unit:browser",
+    "unit:node": "tape test/*.js",
+    "unit:browser": "karma start karma.conf.js"
+  },
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "karma": "^0.13.19",
+    "karma-browserify": "^5.0.1",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-detect-browsers": "^2.0.2",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-tap": "^1.0.3",
+    "nyc": "^6.1.1",
+    "standard": "^6.0.8",
+    "tape": "^4.5.1"
+  }
+}
